@@ -212,3 +212,92 @@ eg: cmatrix
     etc..
 </pre>
 </details>
+
+<details>
+<summary>figlet</summary>
+Use to display the text give in screen
+<pre>
+eg: figlet this is cool
+</pre>
+</details>
+
+<details>
+<summary>banner</summary>
+Use to display the text give in screen
+<pre>
+eg: banner this is cool
+</pre>
+</details>
+
+<details>
+<summary>toilet</summary>
+Use to display the text give in screen
+<pre>
+eg: toilet this is cool
+    toilet -f mono12
+    toilet -F metal
+    toilet -f mono12
+    A
+        ▄▄
+       ████
+       ████
+      ██  ██
+      ██████
+     ▄██  ██▄
+     ▀▀    ▀▀
+
+    etc...
+</pre>
+</details>
+
+<details>
+<summary>Terminal train</summary>
+Use to display a moving train
+<pre>
+eg: sl
+    sl -a
+    sl -s
+    etc...
+</pre>
+</details>
+
+<details>
+<summary>xeys</summary>
+Use to display two eyes on the monitor
+<pre>
+eg: xeyes
+</pre>
+</details>
+
+<details>
+<summary>oneko the cat</summary>
+Use to display a cat chasing the cursor.
+<pre>
+eg: oneko
+</pre>
+</details>
+
+<details>
+<summary>espeak</summary>
+Use to speak the following text
+<pre>
+eg: espeak hello
+</pre>
+</details>
+
+<details>
+<summary>have you mooed today?</summary>
+Use to display a cow
+<pre>
+eg: apt-get moo
+                 (__)
+                 (oo)
+           /------\/
+          / |    ||
+         *  /\---/\
+            ~~   ~~
+            
+..."Have you mooed today?"...
+</pre>
+</details>
+
