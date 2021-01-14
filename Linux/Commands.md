@@ -301,3 +301,18 @@ eg: apt-get moo
 </pre>
 </details>
 
+<details>
+<summary>Ternimal fire</summary>
+Use to display a fire
+<pre>
+eg: aafire
+</pre>
+</details>
+
+<details>
+<summary>BB the movie</summary>
+Use to display the text give in screen
+<pre>
+eg: bb
+</pre>
+</details>
