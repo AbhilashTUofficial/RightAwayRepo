@@ -23,6 +23,14 @@ eg: cd education
 </details>
 
 <details>
+<summary>Rename</summary>
+Use to rename files folders etc
+<pre>
+eg: mv file1name file2name
+</pre>
+</details>
+
+<details>
 <summary>touch file_name</summary>
 Use to create file.
 <pre>
@@ -120,19 +128,87 @@ eg: sudo blkid
 </details>
 
 <details>
-<summary>sudo touch /forceCommand</summary>
-Use to create a flag file (file which execute on boot).
-useful for run scripts on startup.
+<summary>sudo -s</summary>
+extend the sudo, and lock the terminal to the root.
+type exit to exit begin a root user. 
 <pre>
-eg: sudo touch /forcefsck
+eg: sudo -s
+    apt-get update
+    apt-get upgrade
 </pre>
 </details>
 
 <details>
-<summary>sudo touch /forceCommand</summary>
-Use to create a flag file (file which execute on boot).
-useful for run scripts on startup.
+<summary>Switch user</summary>
+Use to switch between users
 <pre>
-eg: sudo touch /forcefsck
+eg: su user2
+    cd ~
+    exit
+    su user1
+    cd ~
+    exit
+</pre>
+</details>
+
+<details>
+<summary>Shut down</summary>
+Use to Shut down
+<pre>
+eg: sudo shutdown -r 15
+    //reboot the system in 15 minutes
+    sudo shutdown -c
+    //cancel the count down
+    sudo shutdown -h now
+    //shut down the system
+    
+</pre>
+</details>
+
+<details>
+<summary>Reboot</summary>
+Use to Reboot
+<pre>
+eg: sudo reboot
+</pre>
+</details>
+
+<details>
+<summary>man</summary>
+Use to pull out the manual for the given command
+<pre>
+eg: man htop
+    man nano
+    man neofetch
+    man man
+</pre>
+</details>
+
+<details>
+<summary>htop</summary>
+Use to display the background tasks running on the system
+<pre>
+eg: htop
+</pre>
+</details>
+
+<details>
+<summary>neofetch</summary>
+Use to display basic info about the system
+<pre>
+eg: neofetch
+</pre>
+</details>
+
+<details>
+<summary>Matrix</summary>
+Use to display the matrix effects
+<pre>
+eg: cmatrix
+    cmatrix -a
+    cmatrix -b
+    cmatrix -B
+    cmatrix -r
+    etc..
 </pre>
 </details>
