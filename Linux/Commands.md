@@ -15,6 +15,14 @@ eg: clear
 </details>
 
 <details>
+<summary>Print Working Directory(PWD)</summary>
+Use to display the path of current directory.
+<pre>
+eg: pwd
+</pre>
+</details>
+
+<details>
 <summary>cd(change directory)</summary>
 Use to change the directory
 <pre>
@@ -24,9 +32,37 @@ eg: cd education
 
 <details>
 <summary>Rename</summary>
-Use to rename files folders etc
+Use to rename files.
 <pre>
 eg: mv file1name file2name
+</pre>
+</details>
+
+<details>
+<summary>Delete files</summary>
+Use to delete files.
+<pre>
+eg: rm filename
+</pre>
+</details>
+
+<details>
+<summary>Delete folders</summary>
+Use to rename folders.
+<pre>
+eg: rmdir foldername
+    // only work if the folder has nothing on it.
+    rm -r foldername 
+    // if the folder has something.
+</pre>
+</details>
+
+<details>
+<summary>Find files/folders</summary>
+Use to find and display the file or folder.
+<pre>
+eg: find filename
+    find . -iname A.txt
 </pre>
 </details>
 
@@ -86,6 +122,7 @@ eg: sudo fsck
 which display the path to the package.
 <pre>
 eg: sudo which google-chrome
+    which cat
 </pre>
 </details>
 
@@ -100,11 +137,28 @@ eg: ping www.google.com
 
 <details>
 <summary>cat</summary>
-Cat read and display the content into the terminal
+Cat read, write, and display the content into the terminal
 (text files)
 <pre>
-eg: cat /etc/fstab
+eg: // read file
+    cat /etc/fstab
     cat file_path
+    // write file
+    cat >> filename
+    type the content
+    // concatenate files
+    cat fileone.txt >> filetwo.txt
+</pre>
+</details>
+
+<details>
+<summary>nano</summary>
+nano is a text editor in linux.
+(text files)
+<pre>
+eg: // read/write file
+    nano /etc/fstab
+    nano file_path
 </pre>
 </details>
 
@@ -152,6 +206,63 @@ eg: su user2
 </details>
 
 <details>
+<summary>Add user</summary>
+Use to add new user.
+<pre>
+eg: adduser name
+</pre>
+</details>
+
+<details>
+<summary>Delete user</summary>
+Use to delete a user.
+<pre>
+eg: deluser name
+</pre>
+</details>
+
+<details>
+<summary>Add group</summary>
+Use to add new group
+<pre>
+eg: addgroup groupname
+</pre>
+</details>
+
+<details>
+<summary>Add user to the group</summary>
+Use to add user to a specific group.
+<pre>
+eg: usermod -a -G groupname username
+</pre>
+</details>
+
+<details>
+<summary>Delete user from the group</summary>
+Use to remove user form certain group.
+<pre>
+eg: gpasswd -d username groupname
+</pre>
+</details>
+
+<details>
+<summary>Delete a group</summary>
+Use to delete a group
+<pre>
+eg: delgroup groupname
+</pre>
+</details>
+
+<details>
+<summary>Change password</summary>
+Use to change the password
+<pre>
+eg: passwd username
+    passwd
+</pre>
+</details>
+
+<details>
 <summary>Shut down</summary>
 Use to Shut down
 <pre>
@@ -181,6 +292,14 @@ eg: man htop
     man nano
     man neofetch
     man man
+</pre>
+</details>
+
+<details>
+<summary>top</summary>
+Use to display the background tasks
+<pre>
+eg: top
 </pre>
 </details>
 
