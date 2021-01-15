@@ -20,6 +20,7 @@ search services.msc on the search bar.
   access to some crittical setting about booting.(don't mess it up)
 <pre>
 search msconfig on the search bar.
+</pre>
 </details>
 
 <details>
