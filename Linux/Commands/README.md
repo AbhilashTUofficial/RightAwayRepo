@@ -435,3 +435,19 @@ Use to display the text give in screen
 eg: bb
 </pre>
 </details>
+<details>
+<summary>chmod</summary>
+Use to change the permissions to file
+chmod [-R][who][+,-,=][permission]filename
+<pre>
+-R: recursive, allow to effect everything under that folder
+who: u -> user, g ->group, o ->others a ->all
++ -> add permission
+- -> remove permission
+== -> assign permission
+permission : w -> write, r -> read, x -> execute
+eg: chmod a+w file.txt (all users can write to the file.txt)
+    chmod -R g+x folder (all groups can execute all the files in the folder)
+    chmod g+w, o-rw, a+x file.txt (dealing with multiple permissions)
+</pre>
+</details>
