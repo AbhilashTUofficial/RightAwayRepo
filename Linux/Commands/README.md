@@ -421,7 +421,7 @@ eg: apt-get moo
 </details>
 
 <details>
-<summary>Ternimal fire</summary>
+<summary>Terminal fire</summary>
 Use to display a fire
 <pre>
 eg: aafire
