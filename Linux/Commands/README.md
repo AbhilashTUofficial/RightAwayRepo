@@ -1,8 +1,20 @@
+###Navigation Commands
+
 <details>
-<summary>killall program_name</summary>
-To kill the program
+<summary>ls(list)</summary>
+Use to list out the directory.
 <pre>
-eg: killall chrome
+eg: ls 
+    ls -l (long)
+    ls -a (all file)
+</pre>
+</details>
+
+<details>
+<summary>cd(change directory)</summary>
+Use to change the directory
+<pre>
+eg: cd education
 </pre>
 </details>
 
@@ -23,10 +35,116 @@ eg: pwd
 </details>
 
 <details>
-<summary>cd(change directory)</summary>
-Use to change the directory
+<summary>find file</summary>
+To print out the extension of the file.
 <pre>
-eg: cd education
+eg: file filename
+</pre>
+</details>
+
+<details>
+<summary>PushD</summary>
+Used to push a new layer of directory over the current directory.
+Useful with the popd command.
+<pre>
+eg: pushd /folder1/folder2/folder3
+    popd 
+</pre>
+</details>
+
+<details>
+<summary>Find files/folders</summary>
+Use to find and display the file or folder.
+<pre>
+eg: find filename
+    find . -iname A.txt
+</pre>
+</details>
+
+<details>
+<summary>locate</summary>
+Used to locate the exe file of the given command/file/program etc...
+<pre>
+eg: locate fileName
+</pre>
+</details>
+
+<details>
+<summary>sudo updatedb</summary>
+used to update the data-base of locate command.
+<pre>
+eg: sudo updatedb
+</pre>
+</details>
+
+<details>
+<summary>which package_name</summary>
+which display the path to the package.
+<pre>
+eg: sudo which google-chrome
+    which cat
+</pre>
+</details>
+
+<details>
+<summary>Shut down</summary>
+Use to Shut down
+<pre>
+eg: sudo shutdown -r 15
+    //reboot the system in 15 minutes
+    sudo shutdown -c
+    //cancel the count down
+    sudo shutdown -h now
+    //shut down the system
+    
+</pre>
+</details>
+
+<details>
+<summary>Reboot</summary>
+Use to Reboot
+<pre>
+eg: sudo reboot
+</pre>
+</details>
+
+<details>
+<summary>man</summary>
+Use to pull out the manual for the given command
+<pre>
+eg: man htop
+    man nano
+    man neofetch
+    man man
+</pre>
+</details>
+
+<br/><br/>
+
+###File System Commands
+
+<details>
+<summary>chmod</summary>
+Use to change the permissions to file
+chmod [-R][who][+,-,=][permission]filename
+<pre>
+-R: recursive, allow to effect everything under that folder
+who: u -> user, g ->group, o ->others a ->all
++ -> add permission
+- -> remove permission
+== -> assign permission
+permission : w -> write, r -> read, x -> execute
+eg: chmod a+w file.txt (all users can write to the file.txt)
+    chmod -R g+x folder (all groups can execute all the files in the folder)
+    chmod g+w, o-rw, a+x file.txt (dealing with multiple permissions)
+</pre>
+</details>
+
+<details>
+<summary>touch file_name</summary>
+Use to create file.
+<pre>
+eg: touch file.txt
 </pre>
 </details>
 
@@ -35,14 +153,6 @@ eg: cd education
 Use to rename files.
 <pre>
 eg: mv file1name file2name
-</pre>
-</details>
-
-<details>
-<summary>Delete files</summary>
-Use to delete files.
-<pre>
-eg: rm filename
 </pre>
 </details>
 
@@ -58,27 +168,10 @@ eg: rmdir foldername
 </details>
 
 <details>
-<summary>Find files/folders</summary>
-Use to find and display the file or folder.
+<summary>Delete files</summary>
+Use to delete files.
 <pre>
-eg: find filename
-    find . -iname A.txt
-</pre>
-</details>
-
-<details>
-<summary>touch file_name</summary>
-Use to create file.
-<pre>
-eg: touch file.txt
-</pre>
-</details>
-
-<details>
-<summary>ls(list)</summary>
-Use to list out the directory.
-<pre>
-eg: ls
+eg: rm filename
 </pre>
 </details>
 
@@ -96,42 +189,6 @@ Use to open and close the file, useful for change the last file open time.
 <pre>
 eg: touch file.txt
     touch *.txt
-</pre>
-</details>
-
-<details>
-<summary>sudo touch /forceCommand</summary>
-Use to create a flag file (file which execute on boot).
-useful for run scripts on startup.
-<pre>
-eg: sudo touch /forcefsck
-</pre>
-</details>
-
-<details>
-<summary>fsck</summary>
-Use to check the files, similar to chkdsk in windows.
-file system check
-<pre>
-eg: sudo fsck
-</pre>
-</details>
-
-<details>
-<summary>which package_name</summary>
-which display the path to the package.
-<pre>
-eg: sudo which google-chrome
-    which cat
-</pre>
-</details>
-
-<details>
-<summary>ping domain -c number</summary>
-ping is used to check internet connection
-<pre>
-eg: ping www.google.com 
-    ping www.google.com -c 3
 </pre>
 </details>
 
@@ -172,25 +229,9 @@ eg: less file.txt
 </pre>
 </details>
 
-<details>
-<summary>sudo blkid</summary>
-Use to list all the drives on the system
-with the UUID and TYPE
-<pre>
-eg: sudo blkid
-</pre>
-</details>
+<br/><br/>
 
-<details>
-<summary>sudo -s</summary>
-extend the sudo, and lock the terminal to the root.
-type exit to exit begin a root user. 
-<pre>
-eg: sudo -s
-    apt-get update
-    apt-get upgrade
-</pre>
-</details>
+###User/Group Commands
 
 <details>
 <summary>Switch user</summary>
@@ -262,38 +303,9 @@ eg: passwd username
 </pre>
 </details>
 
-<details>
-<summary>Shut down</summary>
-Use to Shut down
-<pre>
-eg: sudo shutdown -r 15
-    //reboot the system in 15 minutes
-    sudo shutdown -c
-    //cancel the count down
-    sudo shutdown -h now
-    //shut down the system
-    
-</pre>
-</details>
+<br/><br/>
 
-<details>
-<summary>Reboot</summary>
-Use to Reboot
-<pre>
-eg: sudo reboot
-</pre>
-</details>
-
-<details>
-<summary>man</summary>
-Use to pull out the manual for the given command
-<pre>
-eg: man htop
-    man nano
-    man neofetch
-    man man
-</pre>
-</details>
+###Hack Commands
 
 <details>
 <summary>top</summary>
@@ -318,6 +330,65 @@ Use to display basic info about the system
 eg: neofetch
 </pre>
 </details>
+
+<details>
+<summary>sudo -s</summary>
+extend the sudo, and lock the terminal to the root.
+type exit to exit begin a root user. 
+<pre>
+eg: sudo -s
+    apt-get update
+    apt-get upgrade
+</pre>
+</details>
+
+<details>
+<summary>sudo blkid</summary>
+Use to list all the drives on the system
+with the UUID and TYPE
+<pre>
+eg: sudo blkid
+</pre>
+</details>
+
+<details>
+<summary>killall program_name</summary>
+To kill the program
+<pre>
+eg: killall chrome
+</pre>
+</details>
+
+<details>
+<summary>sudo touch /forceCommand</summary>
+Use to create a flag file (file which execute on boot).
+useful for run scripts on startup.
+<pre>
+eg: sudo touch /forcefsck
+</pre>
+</details>
+
+<details>
+<summary>fsck</summary>
+Use to check the files, similar to chkdsk in windows.
+file system check
+<pre>
+eg: sudo fsck
+</pre>
+</details>
+
+<details>
+<summary>ping domain -c number</summary>
+ping is used to check internet connection
+<pre>
+eg: ping www.google.com 
+    ping www.google.com -c 3
+</pre>
+</details>
+
+<br/><br/>
+
+###Useless Commands
 
 <details>
 <summary>Matrix</summary>
@@ -435,19 +506,17 @@ Use to display the text give in screen
 eg: bb
 </pre>
 </details>
+
+<br/><br/>
+
+###Other Commands
+
 <details>
-<summary>chmod</summary>
-Use to change the permissions to file
-chmod [-R][who][+,-,=][permission]filename
+<summary>Calendar </summary>
+Used to display a simple calendar.
 <pre>
--R: recursive, allow to effect everything under that folder
-who: u -> user, g ->group, o ->others a ->all
-+ -> add permission
-- -> remove permission
-== -> assign permission
-permission : w -> write, r -> read, x -> execute
-eg: chmod a+w file.txt (all users can write to the file.txt)
-    chmod -R g+x folder (all groups can execute all the files in the folder)
-    chmod g+w, o-rw, a+x file.txt (dealing with multiple permissions)
+eg: cal
 </pre>
 </details>
+
+<br/><br/>
