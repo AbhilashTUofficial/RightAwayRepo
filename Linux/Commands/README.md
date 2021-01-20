@@ -1,4 +1,4 @@
-###Navigation Commands
+### Navigation Commands
 
 <details>
 <summary>ls(list)</summary>
@@ -53,40 +53,6 @@ eg: pushd /folder1/folder2/folder3
 </details>
 
 <details>
-<summary>Find files/folders</summary>
-Use to find and display the file or folder.
-<pre>
-eg: find filename
-    find . -iname A.txt
-</pre>
-</details>
-
-<details>
-<summary>locate</summary>
-Used to locate the exe file of the given command/file/program etc...
-<pre>
-eg: locate fileName
-</pre>
-</details>
-
-<details>
-<summary>sudo updatedb</summary>
-used to update the data-base of locate command.
-<pre>
-eg: sudo updatedb
-</pre>
-</details>
-
-<details>
-<summary>which package_name</summary>
-which display the path to the package.
-<pre>
-eg: sudo which google-chrome
-    which cat
-</pre>
-</details>
-
-<details>
 <summary>Shut down</summary>
 Use to Shut down
 <pre>
@@ -108,6 +74,18 @@ eg: sudo reboot
 </pre>
 </details>
 
+<br/><br/>
+
+### Help Commands
+
+<details>
+<summary>whatis</summary>
+used to print a small description about the command.
+<pre>
+eg: whatis ls
+</pre>
+</details>
+
 <details>
 <summary>man</summary>
 Use to pull out the manual for the given command
@@ -119,9 +97,59 @@ eg: man htop
 </pre>
 </details>
 
-<br/><br/>
+<details>
+<summary>sudo updatedb</summary>
+used to update the data-base of locate command.
+<pre>
+eg: sudo updatedb
+</pre>
+</details>
 
-###File System Commands
+<details>
+<summary>History</summary>
+Use to display the command history
+<pre>
+eg: history
+</pre>
+</details>
+
+<details>
+<summary>apropos</summary>
+used to list and display all the commands related to the given tag.
+<pre>
+eg: apropos date
+    apropos file
+</pre>
+</details>
+
+<details>
+<summary>which package_name</summary>
+which display the path to the package.
+<pre>
+eg: sudo which google-chrome
+    which cat
+</pre>
+</details>
+
+<details>
+<summary>Find files/folders</summary>
+Use to find and display the file or folder.
+<pre>
+eg: find filename
+    find . -iname A.txt
+</pre>
+</details>
+
+<details>
+<summary>locate</summary>
+Used to locate the exe file of the given command/file/program etc...
+<pre>
+eg: locate fileName
+</pre>
+</details>
+<br/>br/>
+
+### File System Commands
 
 <details>
 <summary>chmod</summary>
@@ -140,11 +168,12 @@ eg: chmod a+w file.txt (all users can write to the file.txt)
 </pre>
 </details>
 
-<details>
+<details>   
 <summary>touch file_name</summary>
 Use to create file.
 <pre>
 eg: touch file.txt
+    touch file1 file2 fileN
 </pre>
 </details>
 
@@ -172,23 +201,35 @@ eg: rmdir foldername
 Use to delete files.
 <pre>
 eg: rm filename
+    rm * (remove all files)
+    rm *.png (remove all png files)
+    rm firstName* (remove all files starts with the firstName)
+    rm -r folder (remove folder)
 </pre>
 </details>
 
 <details>
-<summary>touch file1 file2</summary>
-Use to create multiple files.
+<summary>Delete empty folders</summary>
+used to delete folders which don't have  any content in it.
 <pre>
-eg: touch file1.txt file2.txt
+eg: rmdir folderName
 </pre>
 </details>
 
 <details>
-<summary>touch file0 (file0 is already existed)</summary>
-Use to open and close the file, useful for change the last file open time.
+<summary>copy</summary>
+used to copy a file.
 <pre>
-eg: touch file.txt
-    touch *.txt
+eg: cp file1Path file2Path
+    cp fileName  newFileName
+</pre>
+</details>
+
+<details>
+<summary>Rename / Move</summary>
+used to rename and move file and folders.
+<pre>
+eg: mv oldFile newFile (the oldFile will get rewrites by the newFile)
 </pre>
 </details>
 
@@ -201,10 +242,13 @@ eg: // read file
     cat /etc/fstab
     cat file_path
     // write file
-    cat >> filename
+    cat >> filename (append content)
+    cat > filename (rewrite the file)
     type the content
     // concatenate files
-    cat fileone.txt >> filetwo.txt
+    cat fileone filetwo
+    cat fileone.txt >> filetwo.txt (append content)
+    cat fileone.txt > filetwo.txt (rewrite the file)
 </pre>
 </details>
 
@@ -216,6 +260,15 @@ nano is a text editor in linux.
 eg: // read/write file
     nano /etc/fstab
     nano file_path
+    nano fileName
+</pre>
+</details>
+
+<details>
+<summary>more</summary>
+more is an predecessor of less.
+<pre>
+eg: more fileName
 </pre>
 </details>
 
@@ -231,7 +284,7 @@ eg: less file.txt
 
 <br/><br/>
 
-###User/Group Commands
+### User/Group Commands
 
 <details>
 <summary>Switch user</summary>
@@ -305,7 +358,32 @@ eg: passwd username
 
 <br/><br/>
 
-###Hack Commands
+### Hack Commands
+
+<details>
+<summary>Users</summary>
+Use to display the users logged into the system.
+<pre>
+eg: users
+</pre>
+</details>
+
+<details>
+<summary>ID</summary>
+Use to display the id numbers of the user.
+<pre>
+eg: id
+</pre>
+</details>
+
+<details>
+<summary>Piping</summary>
+Use one command on another command.
+<pre>
+eg: history | less
+    ls -la /> file.txt
+</pre>
+</details>
 
 <details>
 <summary>top</summary>
@@ -388,7 +466,7 @@ eg: ping www.google.com
 
 <br/><br/>
 
-###Useless Commands
+### Useless Commands
 
 <details>
 <summary>Matrix</summary>
@@ -400,43 +478,6 @@ eg: cmatrix
     cmatrix -B
     cmatrix -r
     etc..
-</pre>
-</details>
-
-<details>
-<summary>figlet</summary>
-Use to display the text give in screen
-<pre>
-eg: figlet this is cool
-</pre>
-</details>
-
-<details>
-<summary>banner</summary>
-Use to display the text give in screen
-<pre>
-eg: banner this is cool
-</pre>
-</details>
-
-<details>
-<summary>toilet</summary>
-Use to display the text give in screen
-<pre>
-eg: toilet this is cool
-    toilet -f mono12
-    toilet -F metal
-    toilet -f mono12
-    A
-        ▄▄
-       ████
-       ████
-      ██  ██
-      ██████
-     ▄██  ██▄
-     ▀▀    ▀▀
-
-    etc...
 </pre>
 </details>
 
@@ -509,13 +550,59 @@ eg: bb
 
 <br/><br/>
 
-###Other Commands
+### Other Commands
 
 <details>
 <summary>Calendar </summary>
 Used to display a simple calendar.
 <pre>
 eg: cal
+</pre>
+</details>
+
+
+<details>
+<summary>figlet</summary>
+Use to display the text give in screen
+<pre>
+eg: figlet this is cool
+</pre>
+</details>
+
+<details>
+<summary>banner</summary>
+Use to display the text give in screen
+<pre>
+eg: banner this is cool
+</pre>
+</details>
+
+<details>
+<summary>toilet</summary>
+Use to display the text give in screen
+<pre>
+eg: toilet this is cool
+    toilet -f mono12
+    toilet -F metal
+    toilet -f mono12
+    A
+        ▄▄
+       ████
+       ████
+      ██  ██
+      ██████
+     ▄██  ██▄
+     ▀▀    ▀▀
+
+    etc...
+</pre>
+</details>
+
+<details>
+<summary>echo</summary>
+Use to display the text give in screen
+<pre>
+eg: echo hello world!!!
 </pre>
 </details>
 
