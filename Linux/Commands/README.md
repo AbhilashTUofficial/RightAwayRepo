@@ -19,6 +19,14 @@ eg: cd education
 </details>
 
 <details>
+<summary>whoami</summary>
+Use to display the current user
+<pre>
+eg: whoami
+</pre>
+</details>
+
+<details>
 <summary>clear</summary>
 Use to clear the screen.
 <pre>
