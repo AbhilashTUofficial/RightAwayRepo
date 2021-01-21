@@ -85,6 +85,12 @@ git config --global user.email email@gmail.com
 </pre>
 </details>
 
+<details>
+<summary>list the users</summary>
+<pre>
+git config --list --show-origin
+</pre>
+</details>
 
 <details>
 <summary>Get the log about the commit, including username, email, date, and time.</summary>
