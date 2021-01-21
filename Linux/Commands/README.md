@@ -74,6 +74,14 @@ eg: sudo reboot
 </pre>
 </details>
 
+<details>
+<summary>IP address</summary>
+Use to check the ip, including address.
+<pre>
+eg: ip a
+</pre>
+</details>
+
 <br/><br/>
 
 ### Help Commands
@@ -114,6 +122,15 @@ eg: history
 </details>
 
 <details>
+<summary>grep filter</summary>
+Use to filter-out, and search the command result.
+Useful with piping
+<pre>
+eg: history | grep cd
+</pre>
+</details>
+
+<details>
 <summary>apropos</summary>
 used to list and display all the commands related to the given tag.
 <pre>
@@ -147,7 +164,7 @@ Used to locate the exe file of the given command/file/program etc...
 eg: locate fileName
 </pre>
 </details>
-<br/>br/>
+<br/>
 
 ### File System Commands
 
@@ -282,7 +299,7 @@ eg: less file.txt
 </pre>
 </details>
 
-<br/><br/>
+<br/>
 
 ### User/Group Commands
 
@@ -356,9 +373,18 @@ eg: passwd username
 </pre>
 </details>
 
-<br/><br/>
+<br/>
 
 ### Hack Commands
+
+<details>
+<summary>Disk free(df)</summary>
+Use to check the disk status,
+<pre>
+eg: df
+    df -h
+</pre>
+</details>
 
 <details>
 <summary>Users</summary>
@@ -464,7 +490,7 @@ eg: ping www.google.com
 </pre>
 </details>
 
-<br/><br/>
+<br/>
 
 ### Useless Commands
 
@@ -548,7 +574,7 @@ eg: bb
 </pre>
 </details>
 
-<br/><br/>
+<br/>
 
 ### Other Commands
 
@@ -606,4 +632,4 @@ eg: echo hello world!!!
 </pre>
 </details>
 
-<br/><br/>
+<br/>
