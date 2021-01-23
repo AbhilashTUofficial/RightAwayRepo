@@ -172,6 +172,13 @@ Used to locate the exe file of the given command/file/program etc...
 eg: locate fileName
 </pre>
 </details>
+<details>
+<summary>IP address</summary>
+Used to display network address.
+<pre>
+eg: ip addr
+</pre>
+</details>
 <br/>
 
 ### File System Commands
@@ -567,6 +574,34 @@ eg: apt-get moo
 </details>
 
 <details>
+<summary>Cowsay</summary>
+Use to display a dialogs
+<pre>
+eg: cowsay happy
+ _______
+< happy >
+ -------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+                
+   cowthink happy
+    _______
+   ( happy )
+    -------
+           o   ^__^
+            o  (oo)\_______
+               (__)\       )\/\
+                   ||----w |
+                   ||     ||
+   cowsay -f ghostbusters who you gonna call
+   
+</pre>
+</details>
+
+<details>
 <summary>Terminal fire</summary>
 Use to display a fire
 <pre>
@@ -594,6 +629,15 @@ eg: cal
 </pre>
 </details>
 
+<details>
+<summary>Curl</summary>
+Used to display html of the given url.
+C-url
+<pre>
+eg: curl https://google.com
+    curl https://github.com/AbhilashTUofficial
+</pre>
+</details>
 
 <details>
 <summary>figlet</summary>
