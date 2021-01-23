@@ -597,7 +597,7 @@ eg: cowsay happy
                    ||----w |
                    ||     ||
    cowsay -f ghostbusters who you gonna call
-   
+  
 </pre>
 </details>
 
