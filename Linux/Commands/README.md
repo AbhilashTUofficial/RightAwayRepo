@@ -534,7 +534,7 @@ eg: sl
 </details>
 
 <details>
-<summary>xeys</summary>
+<summary>xeyes</summary>
 Use to display two eyes on the monitor
 <pre>
 eg: xeyes
