@@ -148,6 +148,14 @@ eg: apropos date
 </details>
 
 <details>
+<summary>aainfo</summary>
+used to list the basic details about the screen and etc..
+<pre>
+eg: aainfo
+</pre>
+</details>
+
+<details>
 <summary>which package_name</summary>
 which display the path to the package.
 <pre>
@@ -314,6 +322,38 @@ eg: less file.txt
 </pre>
 </details>
 
+<details>
+<summary>Word count</summary>
+Return the word count with in the file given.
+<pre>
+eg: wc fileName
+</pre>
+</details>
+
+<details>
+<summary>Compare</summary>
+Compare two files and return the result.
+<pre>
+eg: cmp file1 file2
+</pre>
+</details>
+
+<details>
+<summary>Split</summary>
+Split is used to make a copy of the file at the instance.
+<pre>
+eg: split fileName
+</pre>
+</details>
+
+<details>
+<summary>diff</summary>
+Return the differences two files.
+<pre>
+eg: diff file1 file2
+</pre>
+</details>
+
 <br/>
 
 ### User/Group Commands
@@ -387,7 +427,6 @@ eg: passwd username
     passwd
 </pre>
 </details>
-
 <br/>
 
 ### Hack Commands
@@ -414,6 +453,7 @@ eg: users
 Use to display the id numbers of the user.
 <pre>
 eg: id
+    id -un
 </pre>
 </details>
 
@@ -597,6 +637,7 @@ eg: cowsay happy
                    ||----w |
                    ||     ||
    cowsay -f ghostbusters who you gonna call
+   cowsay -f dragon-and-cow "message"
   
 </pre>
 </details>
@@ -626,6 +667,14 @@ eg: bb
 Used to display a simple calendar.
 <pre>
 eg: cal
+</pre>
+</details>
+
+<details>
+<summary>Sh</summary>
+Used to open a temporary sh file
+<pre>
+eg: sh
 </pre>
 </details>
 
