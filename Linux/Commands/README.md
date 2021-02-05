@@ -322,6 +322,14 @@ eg: less file.txt
 </pre>
 </details>
 
+<details>   
+<summary>PDF to text</summary>
+Use to convert pdf file to text file.
+<pre>
+eg: pdftotext fileName
+</pre>
+</details>
+
 <details>
 <summary>Word count</summary>
 Return the word count with in the file given.

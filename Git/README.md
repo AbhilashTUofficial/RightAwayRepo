@@ -33,7 +33,7 @@ git commit -m "message"
 <details>
 <summary>Display all the stage and unstage files</summary>
 <pre>
-git staus
+git status
 </pre>
 </details>
 
@@ -69,6 +69,12 @@ git merge master
 </pre>
 </details>
 
+<details>
+<summary>Clone from specific branch.</summary>
+<pre>
+git clone -b branchName url/ssh
+</pre>
+</details>
 
 <details>
 <summary>Initialize the username.</summary>
