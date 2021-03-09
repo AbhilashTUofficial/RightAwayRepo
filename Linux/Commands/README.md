@@ -191,6 +191,50 @@ eg: ip addr
 
 ### File System Commands
 
+<details>   
+<summary>cut</summary>
+Use to cut strings.
+<pre>
+eg: echo "hello" | cut -c1
+    h
+    echo "hello" | cut -c1,5
+    ho
+    echo "hello" | cut -c2-
+    ello
+    echo "hello" | cut -c2-4
+    ell
+    echo "$line" | cut -f1-4
+        A field is a string started from the begining 
+        or a white-space to the next white-space or end
+    -d
+        A delimiter is a way of marking the string
+        -d"*" in the "*" has been marked
+        cut -d"*" -f2 -> cut after *
+        cut -d"*" -f1 -> cut before *
+        echo "$line" | cut -d"*" -f1,2,3 cut 3 strings
+        sperated by *
+</pre>
+</details>
+
+<details>   
+<summary>head/tail</summary>
+head display the lines from the head
+tail display the lines from the tail
+<pre>
+eg: head hisFile newFile
+    display 10 hisFile and newFile lines
+    head hisFile
+    display first 10 hisFile lines
+    tail history 
+    display last 10 hisFile lines
+    -n -> number of lines
+    -c -> number of chars
+    -f -> live update
+    tail -f dmesg
+    
+</pre>
+</details>
+
 <details>
 <summary>chmod</summary>
 Use to change the permissions to file
