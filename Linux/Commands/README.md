@@ -231,6 +231,56 @@ eg: head hisFile newFile
     -c -> number of chars
     -f -> live update
     tail -f dmesg
+    head -n22 | tail -n +12 fileName
+    12 to 22 lines
+    
+</pre>
+</details>
+
+<details>   
+<summary>Translate</summary>
+Trim the text or translate a char sequence 
+<pre>
+eg: 
+    echo "hello world" | tr -d "l"
+    heo word
+    echo "hello world" | tr -s "l" "x"
+    hexxo worxd
+    echo "hello world" | tr -s "le" "el"
+    hleo wored
+    echo "Hello world" | tr -d [:lower:]
+    H
+</pre>
+</details>
+
+<details>   
+<summary>Sort</summary>
+Sort the char sequence 
+<pre>
+eg: 
+    sort fileName
+    sort fileName -r 
+    -r -> reverse the result
+    -g -> general numeric-sort
+    -b -> ignore leading white-space
+    -f -> ignore lower-upper case
+    -t -> field separator `sort -t$'\t' -k3`
+    -k -> compare the following column or field `-k3 3rd field`
+    -n -> compare according to string numerical value
+</pre>
+</details>
+
+<details>   
+<summary>Uniq</summary>
+Omit the char sequence 
+<pre>
+eg: 
+    uniq fileName
+    uniq fileName -d
+    -d -> only print duplicate lines, one for each group
+    -D -> print all duplicate lines
+    -i -> ignore differences in case when comparing
+    -u -> only print unique lines
     
 </pre>
 </details>
