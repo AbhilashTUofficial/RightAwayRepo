@@ -135,6 +135,13 @@ Use to filter-out, and search the command result.
 Useful with piping
 <pre>
 eg: history | grep cd
+    grep "string"
+    grep -v -e"a" -e"b" -e"c"
+    -v -> Invert selection
+    -i -> Ignore case
+    -e -> Multiple string/chars
+    -c -> Matching count
+    
 </pre>
 </details>
 
