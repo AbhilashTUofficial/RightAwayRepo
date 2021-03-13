@@ -90,6 +90,19 @@ eg: ip a
 </pre>
 </details>
 
+<details>
+<summary>Wget</summary>
+Use to download web content,
+eg: images and files.
+<pre>
+eg: wget url
+    cat RepoList | while read $url; do wget "$url"; done
+    -> download everything from RepoList
+    wget url1 & wget url2
+    -> download url1 and url2 parallelly.
+</pre>
+</details>
+
 <br/><br/>
 
 ### Help Commands
@@ -261,6 +274,25 @@ eg:
 </details>
 
 <details>   
+<summary>Sed</summary>
+quick parsing and transformation of text. 
+<pre>
+eg: 
+    echo "I like brains, I like apples" | sed -e s/like/love/
+    I love brains, I like apples
+    echo "I like brains, I like apples" | sed -e s/like/love/g
+    I love brains, I love apples
+    echo "I like brains, I like apples" | sed -e s/like/love/2
+    I like brains, I love apples
+    echo "I like brains, I like apples" | sed -e s/^././
+    . like brains, I llike apples
+    -e -> add the script to the commands to be executed
+    -s -> consider files as separate rather than as a single, continuous long stream.
+    /s -> Match pattern
+</pre>
+</details>
+
+<details>   
 <summary>Sort</summary>
 Sort the char sequence 
 <pre>
@@ -288,6 +320,33 @@ eg:
     -D -> print all duplicate lines
     -i -> ignore differences in case when comparing
     -u -> only print unique lines
+    
+</pre>
+</details>
+
+<details>   
+<summary>Paste</summary>
+quick manipulation with files.
+<pre>
+eg: 
+    paste file1 file2 
+    
+    -> Align the content on the file in a horizontal manner,
+       Separated by tab space.
+       
+    paste -d: file1 file2   
+       Separated by colon.
+       
+    < fileName paste - - -
+    -> Align the text file fileName in 3 columns,
+       " - " is represent a column.
+       
+    paste -d';' - - -
+    -> Three line separated by ;
+    
+    -d -> reuse characters from LIST instead of TABs.
+    -s -> serial,  paste one file at a time instead of in parallel.
+    -z -> line delimiter is NUL, not newline.
     
 </pre>
 </details>
@@ -651,6 +710,20 @@ ping is used to check internet connection
 <pre>
 eg: ping www.google.com 
     ping www.google.com -c 3
+</pre>
+</details>
+
+<details>
+<summary>Parallel</summary>
+Parallel is used to run process parallelly
+eg: downloading internet content,
+    video conversion, run audio and video at the same time
+    etc...
+<pre>
+eg: cat RepoList | parallel -j 4 wget {}
+    -> take the urls from RepoList and put it into {}
+       four process is done parrallelly.
+    -j -> number of parallel slots, -j numOfSlots
 </pre>
 </details>
 
