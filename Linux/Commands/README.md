@@ -144,6 +144,7 @@ eg: history
 
 <details>
 <summary>grep filter</summary>
+Global regular expresion print
 Use to filter-out, and search the command result.
 Useful with piping
 <pre>
@@ -154,6 +155,8 @@ eg: history | grep cd
     -i -> Ignore case
     -e -> Multiple string/chars
     -c -> Matching count
+    -w -> Select  only  those  lines  containing  matches  that  form whole words.
+    
     
 </pre>
 </details>
@@ -286,9 +289,14 @@ eg:
     I like brains, I love apples
     echo "I like brains, I like apples" | sed -e s/^././
     . like brains, I llike apples
+    echo "I like brains, I like apples" | sed 's/like/love/ig'
+    I love brains, I love apples
+    
     -e -> add the script to the commands to be executed
     -s -> consider files as separate rather than as a single, continuous long stream.
     /s -> Match pattern
+    /i -> ignore case
+     & -> selected string
 </pre>
 </details>
 
