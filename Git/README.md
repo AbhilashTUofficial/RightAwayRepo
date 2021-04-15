@@ -1,4 +1,12 @@
 <details>
+<summary>git version</summary>
+<pre>
+git --version
+</pre>
+</details>
+
+
+<details>
 <summary>Initialize git folder</summary>
 <pre>
 git init
@@ -42,6 +50,14 @@ git status
 <summary>Discard all changes and restore the previous file.</summary>
 <pre>
 git restore readme.md
+</pre>
+</details>
+
+
+<details>
+<summary>See the diff</summary>
+<pre>
+git diff fileName
 </pre>
 </details>
 

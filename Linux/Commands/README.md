@@ -90,6 +90,19 @@ eg: ip a
 </pre>
 </details>
 
+<details>
+<summary>Wget</summary>
+Use to download web content,
+eg: images and files.
+<pre>
+eg: wget url
+    cat RepoList | while read $url; do wget "$url"; done
+    -> download everything from RepoList
+    wget url1 & wget url2
+    -> download url1 and url2 parallelly.
+</pre>
+</details>
+
 <br/><br/>
 
 ### Help Commands
@@ -131,10 +144,20 @@ eg: history
 
 <details>
 <summary>grep filter</summary>
+Global regular expresion print
 Use to filter-out, and search the command result.
 Useful with piping
 <pre>
 eg: history | grep cd
+    grep "string"
+    grep -v -e"a" -e"b" -e"c"
+    -v -> Invert selection
+    -i -> Ignore case
+    -e -> Multiple string/chars
+    -c -> Matching count
+    -w -> Select  only  those  lines  containing  matches  that  form whole words.
+    
+    
 </pre>
 </details>
 
@@ -190,6 +213,151 @@ eg: ip addr
 <br/>
 
 ### File System Commands
+
+<details>   
+<summary>cut</summary>
+Use to cut strings.
+<pre>
+eg: echo "hello" | cut -c1
+    h
+    echo "hello" | cut -c1,5
+    ho
+    echo "hello" | cut -c2-
+    ello
+    echo "hello" | cut -c2-4
+    ell
+    echo "$line" | cut -f1-4
+        A field is a string started from the begining 
+        or a white-space to the next white-space or end
+    -d
+        A delimiter is a way of marking the string
+        -d"*" in the "*" has been marked
+        cut -d"*" -f2 -> cut after *
+        cut -d"*" -f1 -> cut before *
+        echo "$line" | cut -d"*" -f1,2,3 cut 3 strings
+        sperated by *
+</pre>
+</details>
+
+<details>   
+<summary>head/tail</summary>
+head display the lines from the head
+tail display the lines from the tail
+<pre>
+eg: head hisFile newFile
+    display 10 hisFile and newFile lines
+    head hisFile
+    display first 10 hisFile lines
+    tail history 
+    display last 10 hisFile lines
+    -n -> number of lines
+    -c -> number of chars
+    -f -> live update
+    tail -f dmesg
+    head -n22 | tail -n +12 fileName
+    12 to 22 lines
+    
+</pre>
+</details>
+
+<details>   
+<summary>Translate</summary>
+Trim the text or translate a char sequence 
+<pre>
+eg: 
+    echo "hello world" | tr -d "l"
+    heo word
+    echo "hello world" | tr -s "l" "x"
+    hexxo worxd
+    echo "hello world" | tr -s "le" "el"
+    hleo wored
+    echo "Hello world" | tr -d [:lower:]
+    H
+</pre>
+</details>
+
+<details>   
+<summary>Sed</summary>
+quick parsing and transformation of text. 
+<pre>
+eg: 
+    echo "I like brains, I like apples" | sed -e s/like/love/
+    I love brains, I like apples
+    echo "I like brains, I like apples" | sed -e s/like/love/g
+    I love brains, I love apples
+    echo "I like brains, I like apples" | sed -e s/like/love/2
+    I like brains, I love apples
+    echo "I like brains, I like apples" | sed -e s/^././
+    . like brains, I llike apples
+    echo "I like brains, I like apples" | sed 's/like/love/ig'
+    I love brains, I love apples
+    
+    -e -> add the script to the commands to be executed
+    -s -> consider files as separate rather than as a single, continuous long stream.
+    /s -> Match pattern
+    /i -> ignore case
+     & -> selected string
+</pre>
+</details>
+
+<details>   
+<summary>Sort</summary>
+Sort the char sequence 
+<pre>
+eg: 
+    sort fileName
+    sort fileName -r 
+    -r -> reverse the result
+    -g -> general numeric-sort
+    -b -> ignore leading white-space
+    -f -> ignore lower-upper case
+    -t -> field separator `sort -t$'\t' -k3`
+    -k -> compare the following column or field `-k3 3rd field`
+    -n -> compare according to string numerical value
+</pre>
+</details>
+
+<details>   
+<summary>Uniq</summary>
+Omit the char sequence 
+<pre>
+eg: 
+    uniq fileName
+    uniq fileName -d
+    -d -> only print duplicate lines, one for each group
+    -D -> print all duplicate lines
+    -i -> ignore differences in case when comparing
+    -u -> only print unique lines
+    
+</pre>
+</details>
+
+<details>   
+<summary>Paste</summary>
+quick manipulation with files.
+<pre>
+eg: 
+    paste file1 file2 
+    
+    -> Align the content on the file in a horizontal manner,
+       Separated by tab space.
+       
+    paste -d: file1 file2   
+       Separated by colon.
+       
+    < fileName paste - - -
+    -> Align the text file fileName in 3 columns,
+       " - " is represent a column.
+       
+    paste -d';' - - -
+    -> Three line separated by ;
+    
+    -d -> reuse characters from LIST instead of TABs.
+    -s -> serial,  paste one file at a time instead of in parallel.
+    -z -> line delimiter is NUL, not newline.
+    
+</pre>
+</details>
 
 <details>
 <summary>chmod</summary>
@@ -550,6 +718,20 @@ ping is used to check internet connection
 <pre>
 eg: ping www.google.com 
     ping www.google.com -c 3
+</pre>
+</details>
+
+<details>
+<summary>Parallel</summary>
+Parallel is used to run process parallelly
+eg: downloading internet content,
+    video conversion, run audio and video at the same time
+    etc...
+<pre>
+eg: cat RepoList | parallel -j 4 wget {}
+    -> take the urls from RepoList and put it into {}
+       four process is done parrallelly.
+    -j -> number of parallel slots, -j numOfSlots
 </pre>
 </details>
 
